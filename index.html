@@ -114,7 +114,30 @@
     margin: 15px auto;
     border: 3px solid #38bdf8;
 }
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+.fade-in {
+    animation: fadeIn 1.2s ease-out;
+}
+
+/* Hover effect for cards/sections */
+.hover-effect {
+    transition: transform 0.3s ease;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+}
 </style>
 </head>
  
@@ -122,8 +145,8 @@
 
   <!—HERO 
   <<header>
-  <img src="me.jpg" alt="My Photo" class="profile-pic">
-  <h1>Ayella Isaac</h1>
+<img src="me.jpg" class="fade-in hover-effect">
+<h1 class="fade-in">Ayella Isaac</h1>
   <p>Network Engineer | IT Student | Web Developer</p>
 </header>
 
@@ -137,8 +160,9 @@
 
   <!—ABOUT 
   <section id=”about”>
-    <h2>About Me</h2>
-    <div class=”card”>
+   <div class="fade-in hover-effect">
+   About Me
+</div>
       I am an IT student at university with a strong focus on networking, system administration, and web development.
       I enjoy designing and simulating real-world networks using Cisco Packet Tracer and applying practical solutions
       Through hands-on labs and coursework.
